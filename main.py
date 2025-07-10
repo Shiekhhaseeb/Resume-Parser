@@ -43,7 +43,7 @@ async def upload_file(file: UploadFile = File(...)):
         data = resumeparse.read_file(file_path)
         print(data, 'dataaa')
 
-        return {"data": data, "message": "File uploaded successfully"}
+        return {"data": data }
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

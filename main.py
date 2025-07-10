@@ -41,7 +41,6 @@ async def upload_file(file: UploadFile = File(...)):
         
         # Parse resume
         data = resumeparse.read_file(file_path)
-        print(data, 'dataaa')
 
         return {"data": data }
     
